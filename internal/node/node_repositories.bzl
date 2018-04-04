@@ -46,11 +46,10 @@ def _node_impl(repository_ctx):
   else:
     repository_ctx.download_and_extract(
         [
-            "https://mirror.bazel.build/nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x64.tar.xz",
-            "http://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x64.tar.xz",
+            "http://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-arm64.tar.xz",
         ],
-        stripPrefix = "node-v8.9.1-linux-x64",
-        sha256 = "8be82805f7c1ab3e64d4569fb9a90ded2de78dd27cadbb91bad1bf975dae1e2d"
+        stripPrefix = "node-v8.9.1-linux-arm64",
+        sha256 = "f774660980dcf931bf29847a5f26317823a063fa4a56f85f37c3222d77cce7c1"
     )
   if os_name.lower().find("windows") != -1:
     # The windows distribution of nodejs has the binaries in different paths
